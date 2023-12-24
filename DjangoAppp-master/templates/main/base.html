@@ -23,7 +23,7 @@
 <!--</ul>-->
    <div class="navbar11">
         <div class="menu">
-            <a href="/about " class="menuButton">About</a>
+            <a href="/about" class="menuButton">About</a>
             <a href="#" class="menuButton">News</a>
             <a href="/contact" class="menuButton">feedback</a>
 <!--            <a href="#" class="menuButton">log in</a>-->
@@ -77,7 +77,7 @@
  {% endif %}
         {% for p in paginator.page_range %}
         {% if page_obj.number == p %}
-       <li class="page-item"{{ p }}</li>
+       <li class="page-item">{{ p }}</li>
         {% elif p >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
         <li class="page-link">
             <a class="page-link" href="?page={{ p }}">{{p}}</a>
@@ -86,7 +86,7 @@
         {% endfor %}
 {% if page_obj.has_next %}
  <li class="page-link">
-     <a class="page-link" href="?page={{ page_obj.next_page_number }} "aria-label="Next">
+     <a class="page-link" href="?page={{ page_obj.next_page_number }} " aria-label="Next">
          <span aria-hidden="true">&raquo;</span>
         <span class="sr-only">Next</span></a>
  </li>
@@ -100,32 +100,32 @@
     <!-- Section: Social media -->
     <section class="mb-4">
       <!-- Facebook -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/BroBat11/python_project/activity?ref=main" role="button"
         ><i class="fab fa-facebook-f"></i
       ></a>
 
       <!-- Twitter -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/BroBat11/python_project/activity?ref=main" role="button"
         ><i class="fab fa-twitter"></i
       ></a>
 
       <!-- Google -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/BroBat11/python_project/activity?ref=main" role="button"
         ><i class="fab fa-google"></i
       ></a>
 
       <!-- Instagram -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/BroBat11/python_project/activity?ref=main" role="button"
         ><i class="fab fa-instagram"></i
       ></a>
 
       <!-- Linkedin -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/BroBat11/python_project/activity?ref=main" role="button"
         ><i class="fab fa-linkedin-in"></i
       ></a>
 
       <!-- Github -->
-      <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/BroBat11/python_project/activity?ref=main" role="button"
         ><i class="fab fa-github"></i
       ></a>
     </section>
@@ -136,14 +136,16 @@
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
 
-    <a class="text-white" href="#">iitu.edu.kz</a>
+    <a class="text-white" href="https://github.com/BroBat11/python_project/activity?ref=main">team@</a>
   </div>
   <!-- Copyright -->
 </footer>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
+<script src="{% static 'main/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'main/js/main.js' %}"></script>
+
+
 </body>
 </html>

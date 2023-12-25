@@ -186,3 +186,34 @@ class bibloAPIDestroy(generics.RetrieveDestroyAPIView):
     queryset = Product.objects.all()
     serializer_class = bibloSerializer
     permission_classes = (IsAdminOrReadOnly, )
+
+    def destroy(self, request, *args, **kwargs):
+        try:
+            return super().destroy(request, *args, **kwargs)
+        except Exception as e:
+            # Handle the exception, log it, or perform any necessary actions
+            print(f"An error occurred while processing the API destroy request: {e}")
+            # Optionally, return a custom response or re-raise the exception
+
+
+# views.py
+
+import logging
+from django.http import HttpResponseServerError
+
+logger = logging.getLogger(__name__)
+
+
+def my_view(request):
+    try:
+        # Какой-то код, который может вызвать ошибку
+        result = 1 / 0
+    except Exception as e:
+        # Запись ошибки в лог
+        logger.exception("An error occurred: %s", str(e))
+
+        # Обработка ошибки, например, возврат HTTP-ответа с ошибкой
+        return HttpResponseServerError("Internal Server Error")
+
+    # Код, который выполняется в случае успешного выполнения
+    return HttpResponse("Success!")
